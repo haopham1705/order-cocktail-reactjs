@@ -1,0 +1,69 @@
+.cocktail-section {
+    margin: 0 auto;
+    padding-top: 15vh;
+    .section-title {
+        background-color: var(--primary-color);
+        color: #fff;
+        display: inline-block;
+        padding: 1rem 1.5rem;
+        border-radius: 10px;
+        font-size: 2.3rem;
+        font-weight: bold;
+    }
+    .btn-back {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .drink-section {
+        width: 85vw;
+        max-width: 1170px;
+        margin: 0 auto;
+        text-align: left;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .drink-section img {
+        border-radius: 0.25rem;
+        object-fit: cover;
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .drink-section p {
+        font-weight: bold;
+        text-transform: capitalize;
+        line-height: 1.8;
+    }
+
+    .drink-info {
+        padding-top: 2rem;
+    }
+    .drink-data {
+        background-color: var(--primary-color);
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        color: #fff;
+        font-weight: 600;
+    }
+    .drink-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .drink-info span {
+        display: inline-block;
+        width: 110px;
+    }
+    &__add{
+        padding: 2rem 0;
+        .btn-add {
+            padding: 1rem 8rem;
+            margin: 0;
+
+        }
+    }
+}

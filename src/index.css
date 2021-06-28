@@ -1,0 +1,152 @@
+:root {
+  --primary-color: #3E9000;
+  --primary-dark-color: #367d00;
+  --secondary-color: #2979ff;
+  --white-color: #fff;
+  --black-color: #000;
+  --grey-color: #7c7c7c;
+  --red-color: #F02F2F;
+  --text-color: #212121;
+  --border-color: #414141;
+}
+
+@import 'https://fonts.googleapis.com/css?family=Exo:300,400|Orbitron';
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@500;800&display=swap');
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.btn {
+  background-color: var(--primary-color);
+  cursor: pointer;
+  padding: 8px 12px;
+  color: var(--white-color);
+  font-weight: 650;
+  text-decoration: none;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 10px;
+}
+
+.btn-back {}
+
+.btn:hover {
+  filter: brightness(110%);
+}
+
+.btn:active {
+  filter: brightness(70%);
+}
+
+.msg-not-found {
+  text-align: center;
+  font-size: 3rem;
+  color: #333333;
+  background: #ffffff;
+  text-shadow: 2px 2px 0px #ffffff,
+    5px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+img {
+  width: 100%;
+  max-width: 350px;
+  display: block;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  text-transform: capitalize;
+  letter-spacing: 0.3rem;
+  text-align: center;
+  margin-bottom: 3.5rem;
+  margin-top: 1rem;
+}
+
+.header-title {
+  font-size: 2rem;
+  text-transform: capitalize;
+  letter-spacing: 0.3rem;
+  text-align: center;
+  margin-bottom: 3.5rem;
+  margin-top: 1rem;
+  color: orange;
+}
+
+
+
+@media screen and (min-width: 992px) {
+  .drink {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .drink-info {
+    padding-top: 0;
+  }
+}
+
+.title {
+  font-size: 2rem;
+  text-transform: capitalize;
+  letter-spacing: 0.3rem;
+  text-align: center;
+}
+
+.cocktail-section {
+  text-align: center;
+}
+
+.cocktail {
+  background: #fff;
+  margin-bottom: 2rem;
+  box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s linear;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  border-radius: 0.25;
+}
+
+.cocktail:hover {
+  box-shadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.cocktail img {
+  height: 20rem;
+  object-fit: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
