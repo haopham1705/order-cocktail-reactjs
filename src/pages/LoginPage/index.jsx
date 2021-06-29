@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router'
 import { GlobalActions } from 'redux/slices/globalSlice'
+import LogoImg from 'asserts/img/livef-logo.png'
 
 import './LoginPage.scss'
 
@@ -37,7 +38,7 @@ export default function LoginPage(props) {
     return (
         <div className="login-form fadeInDown">
             <div className="formContent">
-                <img className="formContent__icon" src="http://haopham.co/img/logo_livef.png" id="icon" alt="User Icon" />
+                <img className="formContent__icon" src={LogoImg} id="icon" alt="User Icon" />
                 <h1 className="login-form__title"> Sign In </h1>
                 <form>
                     <input type="text" onChange={(e) => setUsername(e.target.value)} id="login" className="fadeIn second" name="login" placeholder="username" required />

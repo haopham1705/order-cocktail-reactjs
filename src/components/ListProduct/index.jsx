@@ -60,7 +60,7 @@ const ListProduct = () => {
                             );
                         })}
                     </div>
-                    ) : (<h2 className="msg-not-found">No Cocktails matched your search criteria</h2>)
+                    ) : (<h2 className="msg-not-found">No Cocktails matched your search!</h2>)
             }
         </div>
 

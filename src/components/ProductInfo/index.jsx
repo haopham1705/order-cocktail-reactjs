@@ -18,7 +18,6 @@ const ProductInfo = (props) => {
             const productList = await productApi.getLookupId(drinkId);
             console.log(productList)
             setModifiedCocktail(productList[0]);
-            console.log(modifiedCocktail)
             dispatch(GlobalActions.showLoading())
         };
         fetchProducts();
@@ -29,7 +28,7 @@ const ProductInfo = (props) => {
     // if (!modifiedCocktail) {
     //     return <h2 className="section-title">No Cocktail to Display</h2>;
     // }
-    const { strDrink, strDrinkThumb, strCategory, strAlcoholic, strGlass } =
+    const { strDrink, strDrinkThumb, strCategory, strAlcoholic, strGlass, strInstructions } =
         modifiedCocktail;
     return (
         <>
@@ -51,19 +50,25 @@ const ProductInfo = (props) => {
                             </Link>
                             <h2 className="section-title">{strDrink}</h2>
                             <section className="drink-section">
-                                <img src={strDrinkThumb} alt={strDrink} />
+                                <div className="drink-section__img-hover">
+                                    <img className="drink-section__img" src={strDrinkThumb} alt={strDrink} />
+                                </div>
+                                
                                 <div className="drink-info">
-                                    <p>
-                                        <span className="drink-data">Name :</span> {strDrink}
+                                    <p className="drink-info__detail">
+                                        <span className="drink-info__data">Name :</span> <span className="drink-info__content">{strDrink}</span>
                                     </p>
-                                    <p>
-                                        <span className="drink-data">Category :</span> {strCategory}
+                                    <p className="drink-info__detail">
+                                        <span className="drink-info__data">Category :</span> <span className="drink-info__content">{strCategory}</span>
                                     </p>
-                                    <p>
-                                        <span className="drink-data">Info :</span> {strAlcoholic}
+                                    <p className="drink-info__detail">
+                                        <span className="drink-info__data">Type :</span> <span className="drink-info__content">{strAlcoholic}</span>
                                     </p>
-                                    <p>
-                                        <span className="drink-data">Glass :</span> {strGlass}
+                                    <p className="drink-info__detail">
+                                        <span className="drink-info__data">Glass :</span> <span className="drink-info__content">{strGlass}</span>
+                                    </p>
+                                    <p className="drink-info__detail">
+                                        <span className="drink-info__data">Detail :</span> <span className="drink-info__content">{strInstructions}</span> 
                                     </p>
                                     <p className="cocktail-section__add">
                                         <button className="btn btn-add" onClick={() => handleAddToCart(modifiedCocktail)}>Add</button>
