@@ -7,9 +7,12 @@ export default function GlobalLoading() {
     const loading = useSelector(state => state.GlobalReducer.isLoading);
 
     if(loading){
-        return <div className="loading-content">
-            <CircularProgress color='primary' size='3rem' />
+        return (
+            <div className="loading-content">
+                <div className="loading-content__bg-loading"></div>
+                <CircularProgress color='primary' size='3rem' className="loading-content__icon" />
             </div>
+        )
     }
     return null
 }

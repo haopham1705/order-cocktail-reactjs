@@ -16,11 +16,11 @@ export default function Header(props) {
         return sum += currentValue.quantity
     }, 0)
     cartQuanlity = cartQuanlity || '';
-    const [cartNum, setCartNum] = useState(0);
+    const [cartQuantity, setCartQuantity] = useState(0);
     const history = useHistory();
     const dispatch = useDispatch();
     useEffect(() => {
-        setCartNum(cartQuanlity)
+        setCartQuantity(cartQuanlity)
     }, [cartQuanlity])
 
 
@@ -46,7 +46,7 @@ export default function Header(props) {
                 variant="contained"
                 startIcon={<ShoppingBasketIcon />}
                 onClick={handleAddToCart} >
-                <span className="main-header__cart-number">{cartNum}</span>
+                <span className="main-header__cart-number">{cartQuantity}</span>
             </Button>
         </div>
     )

@@ -13,18 +13,15 @@ export default function LoginPage(props) {
     const [password, setPassword] = useState('');
     const [msg, setMsg] = useState('')
 
-    const handleLogin = () => {
-        // e.preventDefault();
+    const handleLogin = (e) => {
+        e.preventDefault();
         if (username !== '' && password !== '') {
             if (username === 'admin' && password === 'admin') {
                 localStorage.setItem('username', username)
                 localStorage.setItem('password', password)
                 console.log('login success')
-                history.push('/') 
-                setUsername('')
-                setPassword('')
-                setMsg('')
-            } else {
+                history.push('/')  
+            } else { 
                 setMsg("Please enter correct username & password")
             }
         }

@@ -1,6 +1,6 @@
 :root {
   --primary-color: #3E9000;
-  --primary-dark-color: #367d00;
+  --primary-dark-color: #295f00;
   --secondary-color: #2979ff;
   --white-color: #fff;
   --black-color: #000;
@@ -67,10 +67,10 @@ code {
 }
 
 .msg-not-found {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 3rem;
-  color: #333333;
-  background: #ffffff;
   text-shadow: 2px 2px 0px #ffffff,
     5px 4px 0px rgba(0, 0, 0, 0.15);
 }
