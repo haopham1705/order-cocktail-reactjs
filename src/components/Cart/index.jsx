@@ -70,9 +70,9 @@ export default function Cart(props) {
             {coctailsSelected.length > 0 ?
                 <>
                     <div className="cart-content__quantity-txt">Cart: {cartQuanlity} </div>
-                    <div>
+                    <>
                         {coctailsSelected.map(renderSelectedDrinks)}
-                    </div>
+                    </>
                 </>
                 :
                 <div className="msg-not-found">Cart is Empty</div>

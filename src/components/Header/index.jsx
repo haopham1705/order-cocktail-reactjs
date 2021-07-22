@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { Button } from "@material-ui/core";
-import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
-import { Link } from "react-router-dom";
-
+import { Button } from "@material-ui/core"; 
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import { Link } from "react-router-dom"; 
 import { useHistory } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
 import { GlobalActions } from 'redux/slices/globalSlice';
@@ -21,8 +20,7 @@ export default function Header(props) {
     const dispatch = useDispatch();
     useEffect(() => {
         setCartQuantity(cartQuanlity)
-    }, [cartQuanlity])
-
+    }, [cartQuanlity]) 
 
     const handleLogout = () => {
         localStorage.clear();
@@ -44,7 +42,7 @@ export default function Header(props) {
             </Link>
             <Button
                 variant="contained"
-                startIcon={<ShoppingBasketIcon />}
+                startIcon={<ShoppingCartIcon />}
                 onClick={handleAddToCart} >
                 <span className="main-header__cart-number">{cartQuantity}</span>
             </Button>

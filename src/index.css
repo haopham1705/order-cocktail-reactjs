@@ -1,6 +1,6 @@
 :root {
-  --primary-color: #26AD51;
-  --primary-dark-color: #295f00;
+  --primary-color: #39AE52;
+  --primary-dark-color: #1c8b34;
   --secondary-color: #2979ff;
   --white-color: #fff;
   --black-color: #000;
@@ -19,17 +19,12 @@
 
 html {
   box-sizing: border-box;
-  margin: 0 auto;
-}
-
-body {
-  margin: 0;
-  font-family: 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: 'Segoe UI',
+    'Roboto',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+} 
 
 ul {
   list-style-type: none;
@@ -44,16 +39,19 @@ code {
     monospace;
 }
 
+button {
+  cursor: pointer;
+}
+
 .btn {
   background-color: var(--primary-color);
   cursor: pointer;
   padding: 8px 12px;
   color: var(--white-color);
   font-weight: 650;
-  text-decoration: none;
   border-radius: 10px;
   display: inline-block;
-  margin: 10px;
+  border: 0;
 }
 
 .btn-back {}
@@ -70,6 +68,7 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   font-size: 3rem;
   text-shadow: 2px 2px 0px #ffffff,
     5px 4px 0px rgba(0, 0, 0, 0.15);
@@ -102,21 +101,6 @@ img {
   margin-bottom: 3.5rem;
   margin-top: 1rem;
   color: orange;
-}
-
-
-
-@media screen and (min-width: 992px) {
-  .drink {
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    gap: 3rem;
-    align-items: center;
-  }
-
-  .drink-info {
-    padding-top: 0;
-  }
 }
 
 .title {

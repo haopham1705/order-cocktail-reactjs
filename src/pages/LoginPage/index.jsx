@@ -23,7 +23,7 @@ export default function LoginPage(props) {
                 console.log('login success')
                 history.push('/')  
             } else { 
-                setMsg("Please enter correct username & password")
+                setMsg("Please enter correct username or password")
             }
         }
     }
